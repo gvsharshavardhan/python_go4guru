@@ -1,0 +1,77 @@
+variables
+
+a = 10
+
+a -> variable
+= -> assignment operator
+10 -> object(int)
+
+Dynamically typed language -> python, javascript
+statically type language -> java, c, c++
+
+print()
+type()
+
+data type:
+===========
+numeric:
+---------
+1.int
+2.float
+3.complex 
+
+text:
+------
+4.string(str) - we should enclose them in double quotes/single quotes/triple quotes
+
+5.bool -> True(1), False(0)
+note: True(capital T) False(capital F)
+Python is a case sensitve.
+
+note:
+-------
+we can add int and bool.
+internally python treats -> True as 1, Flase as 0
+
+6.Range()
+7.List
+8.Tuple
+9.Set
+10.Dict
+11.None
+
+
+example:
+------------
+a = 10
+b = 56.9
+c = 2 + 8j
+
+print(type(a))
+print(type(b))
+print(type(c))
+
+o/p:
+-----
+<class 'int'>
+<class 'float'>
+<class 'complex'>
+
+Identifiers:
+---------------
+names are called as Identifiers in python.
+it can be a variable name, function name, module name, class name.
+
+1.alphabets, numbers and underscore(_)
+2.other than obove mentioned , we are not allowed to have in a identifier.
+3.we can't have numbers at starting of an identifier.
+4.we can't have keywords(reserved words) for identifiers.
+
+
+comments:(ctrl + /)
+---------------------
+comments are for used for documentation purpose.
+inactive code.
+
+# -> place # at starting of the line.
+""" data to be commmented """ 
