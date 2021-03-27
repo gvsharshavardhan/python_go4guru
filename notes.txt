@@ -75,3 +75,114 @@ inactive code.
 
 # -> place # at starting of the line.
 """ data to be commmented """ 
+
+
+input()
+--------
+to take input from the console.
+this function always input as "str", it is programmers responsibilty to convert it into required data type.
+
+print()
+---------
+to print on to the console.
+default sep is <space>
+default end is <new line>
+
+
+type convertions:
+------------------
+to str
+-------
+int        -> possible
+float               -> possible
+complex             -> possible
+bool                -> possible
+
+to int
+--------
+str  -> only base 10 (numeric strings) -> possible
+float -> possible(we will lose precision)
+complex -> not possible
+bool -> possible(True - 1, False - o)
+
+to float
+---------
+bool -> possible (True - 1.0, False - 0.0)
+int -> possible (45 -> 45.0)
+complex -> not possible
+str -> only floating types (decimal strings) -> possible
+
+to bool
+--------
+int -> possible (any number(+ve or -ve) to bool except zero - True, zero - false)
+float -> same as above
+string -> olny empty string - false, 
+note: spaces are also characters in programming. So, spaces are not empty strings.
+complex -> only  0+0j -> false, any other complex numbers -> true
+
+
+to complex:
+------------
+int -> 78 -> 78+0j
+float -> 56.88 -> 56.88+0j
+bool-> True -> 1+0j , False-> 0+0j
+str -> numeric , decimal or complex string are allowed
+eg:
+"10" -> 10+0j
+"34.5" -> 34.5+0j
+"3+56j" -> 3+56j
+
+
+Operators:
+-----------
+assignment operator:
+----------------------
+=
+
+arthimetic operators:
+----------------------
++
+-
+*
+**
+/
+%
+//
+
+equality Operators:
+----------------------
+==
+!=
+>
+<
+>=
+<=
+
+logical operators:
+-------------------
+and
+or
+not
+
+
+membership operators:
+----------------------
+in
+not in
+
+relational operators:
+----------------------
+is 
+not is
+
+
+bitwise - or(|) and(&)
+
+short hand operators:
+-----------------------
++=
+-=
+*=
+/=
+%=
+//=
