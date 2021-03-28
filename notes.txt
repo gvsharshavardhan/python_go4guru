@@ -23,6 +23,7 @@ numeric:
 text:
 ------
 4.string(str) - we should enclose them in double quotes/single quotes/triple quotes
+str -> sequence of characters.
 
 5.bool -> True(1), False(0)
 note: True(capital T) False(capital F)
@@ -149,7 +150,10 @@ arthimetic operators:
 %
 //
 
-equality Operators:
+between str and str -> only "+" operator is applicable, acts as a concatination operator
+between str and int -> only "*" operator is applicable, acts as a repeteation operator
+
+equality Operators:(returns bool)
 ----------------------
 ==
 !=
@@ -165,7 +169,7 @@ or
 not
 
 
-membership operators:
+membership operators: (sequence/iterable) 
 ----------------------
 in
 not in
@@ -186,3 +190,45 @@ short hand operators:
 /=
 %=
 //=
+
+
+Mutability:
+-----------
+immutable datatypes:
+int
+float
+str
+bool
+complex
+tuple
+
+mutable datatypes:
+list
+Set
+dict
+
+
+03-04-2021
+-------------
+condecision making stmt
+ if 
+ elif 
+ else 
+
+ for 
+ while
+
+ break 
+ continue
+
+ list
+ Set
+ Tuple
+ Dict
+
+ functions
+-----------------------------
+ oops 
+ file 
+ exceptions 
+
