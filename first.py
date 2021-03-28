@@ -1,7 +1,6 @@
 a = 3
-
-print(a)
-
-a += 5
-
-print(a)
+b = a
+print(type(a))
+print(id(a))
+print(id(b))
+print(a is b)

@@ -174,11 +174,12 @@ membership operators: (sequence/iterable)
 in
 not in
 
-relational operators:
+relational operators:(compares address of the objects)
 ----------------------
 is 
 not is
 
+id() : returns address of the object.
 
 bitwise - or(|) and(&)
 
