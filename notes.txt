@@ -211,16 +211,41 @@ dict
 
 03-04-2021
 -------------
-condecision making stmt
- if 
- elif 
+conditional stmt/flow control stmts
+ if  
  else 
+elif
+
+range:
+--------
+range(5) -> 0 1 2 3 4 : 0 is start(start is included), 5 is stop (stop is exculded)
+range(5,13) -> 5 6 7 8 9 10 11 12 : 5 is start, 13 is stop
+range(5,13,2) -> 5 7 9 11 : 5 is start, 13 is stop  and 2 is step
+note:
+-----
+default step is 1
+
+seq/iterables:
+----
+range
+String
+list
+set
+tuple
+dict
 
  for 
  while
 
+ for vs while:
+ --------------
+ for: when we know the no of iterations then we should go with for.
+ while : when we don't know no if iterations ,but we know the condition then we should with while.
+
  break 
  continue
+
+ else with loops
 
  list
  Set
