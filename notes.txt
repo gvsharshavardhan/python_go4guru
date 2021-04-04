@@ -245,7 +245,68 @@ dict
  break 
  continue
 
- else with loops
+ else with loops:
+ else will chance only when there is no any intruption in the loop.
+
+range():
+-----------
+range(start,stop,step)
+if start < stop, then step should be +ve
+if start > stop, then step should be -ve
+
+else , range returns nothing.
+
+
+home work:
+-------------
+r = 6
+
+*
+# #
+* * *
+# # # #
+* * * * *
+# # # # # #
+
+
+r = 5
+1
+2 2
+3 3 3
+4 4 4 4
+5 5 5 5 5
+
+5 5 5 5 5
+4 4 4 4
+3 3 3
+2 2
+1
+
+1
+1 2
+1 2 3
+1 2 3 4
+1 2 3 4 5
+
+5 4 3 2 1
+4 3 2 1
+3 2 1
+2 1
+1
+
+1 2 3 4 5
+1 2 3 4
+1 2 3
+1 2
+1
+
+5
+5 4
+5 4 3
+5 4 3 2
+5 4 3 2 1
+
+
 
  list
  Set
