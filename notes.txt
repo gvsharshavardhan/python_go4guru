@@ -381,6 +381,65 @@ similar to range operations
 reverse a string:
 print(s[::-1])
 
+operators on strings:
+----------------------
++ -> concatination operator
+* -> repeteation operator
+>, <, >=, <= -> alphabetical order
+==, !=
+
+removing spaces from the string:
+---------------------------------
+strip() -> removes spaces from both the sides
+rstrip() -> removes spaces from right hand side
+lstrip()-> removes spaces from left hand side
+
+finding substring within our string:
+--------------------------------------
+1)
+find(substring,start,stop) -> searches from left to right and gives index of first occurance of a substring.
+rfind(substring,start,stop) -> searches from right to left 
+
+note:
+------
+if substring is not present then it returns -1
+
+2)
+index()
+same as find but only dfferenc is it throws error if subsring is not present
+
+counting substring in the given string:
+-----------------------------------------
+1)
+count():
+gives us count of substring. if subsgring is not present it returns 0.
+
+
+replacing a string with another string:
+-----------------------------------------
+1)
+replace(oldstr,newstr)
+
+splitting of string:
+---------------------
+split(separator) -> returns list of strings.
+by default it splits by spaces.
+
+
+join:
+----------
+separator.join(pieces of string)
+
+
+changing case of a string:
+---------------------------
+upper()
+lower()
+swapcase()
+title() -> every first char of a string should be capital
+capitalize() -> chnages first char of a statemnt to capital
+
+
  list
  Set
  Tuple
