@@ -440,6 +440,77 @@ title() -> every first char of a string should be capital
 capitalize() -> chnages first char of a statemnt to capital
 
 
+checking starting and ending part of a string:
+-----------------------------------------------
+mainstring.startswith(substring)
+mainstring.endswith(substring)
+
+these methods return bool value.
+
+to check type of character present in a string:
+------------------------------------------------
+isalnum()
+isaplha()
+isdigit() -> it returns true if char is 0 to 9
+islower()
+isupper()
+istitle()
+isspace()
+
+1. reverse a string using slice opertor and for loop.
+
+name = "python lnaguage"
+
+print(name[::-1])
+
+l = len(name)
+rev = ""
+for i in range(l-1, -1, -1):
+    rev = rev + name[i]
+
+print(rev)
+
+2(Homework). reverse a string using while
+
+
+3(Homework).palindrome
+
+4. first and last chars should be caps and all other chars should be in small.
+
+5. reverse internal content of each word in a sentence.
+
+eg:
+-----
+i/p: python is a easy language
+o/p: nohtyp si a ysae egaugnal
+
+hint:make it into pieces
+
+6.reverse internal content of alternate word in a sentence.
+
+7.reverse whole sentence along with internal content of each word.
+eg:
+-----
+i/p: python is a easy language
+o/p: egaugnal ysae a si nohtyp
+
+
+8. seperate odd chars from a string and even chars from a string
+
+9.remove duplicates from a string
+a1a,a? bcd a,ab1b?d
+abcd, ?1
+
+10.sting expanion
+i/p: a4b4c2a2
+o/p : aaaabbbbccaa
+
+11.stirng compression
+
+i/p: aaaabbbbccaa
+o/p: a4b4c2a2
+
+
  list
  Set
  Tuple
