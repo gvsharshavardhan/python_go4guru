@@ -511,10 +511,48 @@ i/p: aaaabbbbccaa
 o/p: a4b4c2a2
 
 
- list
- Set
- Tuple
- Dict
+ list:
+--------------
+1. to hold collection of a data
+2. it is expamdable and shrinkable
+3. it can hold heterogeneous elements
+4. list is mutable
+5. duplicates are allowed
+6. elements are placed in square brackets , comma seperated.
+7. you can acess the elements using index(is supports both +ve and -ve indexing similar to strings)
+8. sequence/iterable type
+9. insertion order is preserved
+
+ tuple:
+--------------
+1. to hold collection of a data
+2. it is expandable and shrinkable
+3. it can hold heterogeneous elements
+4. tuple is immutable
+5. duplicates are allowed
+6. elements are placed in c brackets , comma seperated.
+7. indexing concept is applicable(both +ve and -ve index)
+8. sequence/iterable type
+9. insertion order is preserved
+
+ set:
+--------------
+1. to hold collection of a data
+2. it is expandable and shrinkable
+3. it can hold heterogeneous elements
+4. set is mutable
+5. duplicates are not allowed
+6. elements are placed in flower brackets , comma seperated.
+7. indexing concept is not applicable
+8. sequence/iterable type
+9. insertion order is not preserved
+10. it adds elements based on hashcode
+
+
+imp:
+-----
+s = {}
+<class 'dict'> {}
 
  functions
 -----------------------------
