@@ -1,0 +1,840 @@
+Lists:
+=======
+֍ If we want to represent a group of individual objects as a single entity where insertion
+order preserved and duplicates are allowed, then we should go for List.
+
+֍ insertion order preserved.
+
+֍ duplicate objects are allowed.
+
+֍ heterogeneous objects are allowed.
+
+֍ List is dynamic because based on our requirement we can increase the size and
+decrease the size.
+
+֍ In List the elements will be placed within square brackets and with comma seperator.
+
+֍ We can differentiate duplicate elements by using index and we can preserve insertion
+order by using index. Hence index will play very important role.
+
+֍ Python supports both positive and negative indexes. +ve index means from left to
+right where as negative index means right to left.
+
+֍ List objects are mutable.i.e we can change the content.
+
+Creation of List Objects:
+-------------------------
+0. create empty list
+   el = []
+
+1. l = [1,3,5,7]
+
+2. With Dynamic Input:
+ list=eval(input("Enter List:"))
+ print(list)
+ print(type(list)) 
+
+3. dynamic list from user
+  l = eval(input("enter list:"))
+
+4. range,str,tuple..etc (other datatyes) to list
+  l = list("python")
+  l2 = list(range(0,10,2))
+  l3 = list()
+
+5. With split() Function:
+ s="Learning Python is very very easy !!!"
+ l=s.split()
+ print(l)
+ print(type(l)) 
+ 
+Nested lists:
+=============
+Note: Sometimes we can take list inside another list, such type of lists are called nested
+lists.
+[10, 20, [30, 40]]
+
+Accessing Elements of List:
+============================
+We can access elements of the list either by using 
+"index" or by using "slice operator(:)"
+1)By using Index:
+---------------------
+֍ List follows zero based index. ie index of first element is zero.
+֍ List supports both +ve and -ve indexes.
+֍ +ve index meant for Left to Right
+֍ -ve index meant for Right to Left
+
+2)By using Slice Operator:
+-----------------------------
+Syntax: list2 = list1[start:stop:step]
+
+Start - It indicates the Index where slice has to Start
+ Default Value is 0
+Stop - It indicates the Index where slice has to End
+ Default Value is max allowed Index of List ie Length of the List
+Step - increment value
+Default Value is 1
+
+Traversing the Elements of List:
+===================================
+The sequential access of each element in the list is called traversal.
+
+1)By using while Loop
+2)By using for Loop
+3)To display Elements by Index wise
+4)To display only Even Numbers
+
+
+Mathematical operators for List:
+=================================
+1. Concatnation operator : +
+
+list + list = list
+list + other types = typeError
+
+l1 = [3,5,7]
+l2 = [34,65]
+l3 = l1 + l2 //[3,5,7,34,65]
+
+2. Repeatation operator : *
+
+list * int = list
+list * other type = typeError
+
+l = [3,7]
+l2 = l*2
+print(l2) //[3,7,3,7]
+
+Equality Operator (== , !=):
+==============================
+1. order must be same
+2. count must be same
+3. content must be same with case
+
+Relational Operators (<,>,<=,>=):
+==================================
+Checks content for first element, if equal then moves to other elements
+
+l1 = [10,30,45]
+l2 = [10,30,21]
+l1>=l2 // true
+
+l1=["ramya","roja"]
+l2=["rohit","raju"]
+
+l1>=l2 //false
+
+Membership operator:
+=====================
+in , not in
+
+Important List methods and functions:
+======================================
+
+I. To get Information about List:
+----------------------------------
+1) len():
+Returns the number of elements present in the list
+
+2) count():
+It returns the number of occurrences of specified item in the list
+
+n=[1,2,2,2,2,3,3]
+print(n.count(2))  // 4
+
+3) index():
+ Returns the index of first occurrence of the specified item
+
+Note: If the specified element not present in the list then we will get ValueError.Hence
+before index() method we have to check whether item present in the list or not by using in
+operator.
+
+II. Manipulating Elements of List:
+------------------------------------
+
+1) append(element) Function:
+----
+ We can use append() function to add item at the end of the list.
+ 
+Eg: To add all elements to list upto 100 which are divisible by 10
+
+l = list(range(1,101))
+fl = []
+
+for i in l:
+    if i%10==0:
+        fl.append(i)
+print(fl)
+
+2) insert(index, element) Function:
+-----
+ To insert item at specified index position
+ 
+n=[1,2,3,4,5]
+n.insert(10,777)
+n.insert(-10,999)
+print(n) //[999, 1, 2, 3, 4, 5, 777] 
+
+Note: If the specified index is greater than max index then element will be inserted at last
+position. If the specified index is smaller than min index then element will be inserted at
+first position.
+
+Differences between append() and insert():
+-------------------------------------------
+append() 
+In List when we add any element it will
+come in last i.e. it will be last element.
+
+insert()
+In List we can insert any element in
+particular index number
+
+3) extend() Function:
+----
+ To add all items of one list to another list
+ l1.extend(l2)
+ all items present in l2 will be added to l1
+
+note(loop holes):
+==================
+1 . when,
+list.extend(string) , then string will be extends as list
+
+order = ["Chicken","Mutton","Fish"]
+order.extend("Mushroom")
+print(order)
+['Chicken', 'Mutton', 'Fish', 'M', 'u', 's', 'h', 'r', 'o', 'o', 'm'] 
+
+2. 
+list1.append(list2) , then list2 will be added as an element at the end.
+l1 = [12,34,23]
+l2 = [34,88]
+
+l1.append(l2) // [12,34,23,[34,88]]
+
+removing elements:
+------------------
+4) remove(element) Function:
+-----
+We can use this function to remove specified item from the list.If the item present
+multiple times then only first occurrence will be removed.
+
+If the specified item not present in list then we will get ValueError
+
+Note: Hence before using remove() method first we have to check specified element
+present in the list or not by using in operator.
+
+how to remove all occurances of given element:
+-----------------------------------------------
+l = [1,2,3,1,1,2,3,4]
+i = int(input("enter element to be removed:"))
+while True:
+    if i in l:
+	    l.remove(i)
+	else:
+	    break
+print(l)
+
+5) pop() / pop(index) Function:
+----
+- It removes and returns the last element of the list.
+- This is only function which manipulates list and returns some element.
+
+Note:
+1) pop() is the only function which manipulates the list and returns some value
+2) In general we can use append() and pop() functions to implement stack datastructure
+by using list,which follows LIFO(Last In First Out) order.
+
+In general we can use pop() function to remove last element of the list. But we can use to
+remove elements based on index.
+n.pop(index) - To remove and return element present at specified index.
+n.pop() - To remove and return last element of the list
+
+Note: List Objects are dynamic. i.e based on our requirement we can increase and
+decrease the size.
+append(), insert(), extend() -> for increasing the size/growable nature
+remove(), pop() -> for decreasing the size /shrinking nature
+
+6) clear()
+ all the elements will be removed
+
+ Ordering elements of lists:
+----------------------------
+1) Reversing Order:
+--------------------
+
+list.reverse() //list specific method
+----------------
+l = [2,4,1,10]
+l.reverse() //[10,1,4,2]
+
+reversed() //python inbuilt function for any sequence
+-----------------
+l = [2,4,67,22,23]
+r = reversed(l)
+print(list(l))
+
+2) sorting order:
+-------------------
+list.sort() //list specific method
+
+to sort in reverse order: sort(reverse=True)
+
+sorted() //python inbuilt function
+
+Note: To use sort() function, compulsory list should contain only homogeneous elements.
+Otherwise we will get TypeError
+
+
+Aliasing and Cloning of List Objects:
+--------------------------------------
+Aliasing:
+The process of giving another reference variable to the existing list is called aliasing.
+
+The problem in this approach is by using one reference variable if we are changing
+content, then those changes will be reflected to the other reference variable
+
+To overcome this problem we should go for cloning.
+The process of creating exactly duplicate independent object is called cloning.
+We can implement cloning by using slice operator or by using copy() function.
+1) By using Slice Operator
+2) By using copy() Function
+
+Nested List as Matrix:
+-------------------------
+In Python we can represent matrix by using nested lists.
+
+# Write a Python program to shuffle and print a specified list.
+---------------
+import random
+color = ['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow']
+random.shuffle(color)
+print(color)
+
+Tuples:
+========
+1) Tuple is exactly same as List except that it is immutable. i.e once we creates Tuple
+object, we cannot perform any changes in that object.
+2) Hence Tuple is Read only version of List.
+3) If our data is fixed and never changes then we should go for Tuple.
+4) We can represent Tuple elements within Parenthesis and with comma seperator.
+5) Parenethesis are optional but recommended to use.
+
+Note: We have to take special care about single valued tuple.compulsary the value
+should ends with comma, otherwise it is not treated as tuple.
+
+Q) Which of the following are valid Tuples?
+1) t = ()//v
+2) t = 10, 20, 30, 40//v
+3) t = 10//not
+4) t = 10,//v
+5) t = (10)//not
+6) t = (10,)//v
+7) t = (10, 20, 30, 40)//v
+
+Tuple Creation:
+1) t = ()
+ Creation of Empty Tuple
+ 
+2) t = (10,)
+t = 10,
+ Creation of Single valued Tuple, Parenthesis are Optional, should ends with Comma
+
+3) t = 10, 20, 30
+t = (10, 20, 30)
+ Creation of multi values Tuples & Parenthesis are Optional.
+ 
+ By using tuple() Function:
+ list=[10,20,30]
+ t=tuple(list)
+ print(t)
+
+ t=tuple(range(10,20,2))
+ print(t) 
+
+# min() And max() Functions
+
+
+We have only two methods in tuple:
+----------------------------------
+count()
+index()
+
+Tuple Packing and Unpacking:
+=============================
+We can create a tuple by packing a group of variables.
+Eg:
+a = 10
+b = 20
+c = 30
+d = 40
+t = a, b, c, d
+print(t) // (10, 20, 30, 40)
+- Here a, b, c, d are packed into a Tuple t. This is nothing but Tuple packing.
+
+- Tuple unpacking is the reverse process of Tuple packing.
+- We can unpack a Tuple and assign its values to different variables.
+t=(10,20,30,40)
+a,b,c,d=t
+print("a=",a,"b=",b,"c=",c,"d=",d)
+Output: a= 10 b= 20 c= 30 d= 40 
+
+Note: At the time of tuple unpacking the number of variables and number of values
+should be same, otherwise we will get ValueError.
+Eg:
+t = (10,20,30,40)
+a, b, c = t # ValueError: too many values to unpack (expected 3)
+
+Set:
+=====
+ If we want to represent a group of unique values as a single entity then we should go
+for set.
+ Duplicates are not allowed.
+ Insertion order is not preserved.But we can sort the elements.
+ Indexing and slicing not allowed for the set.
+ Heterogeneous elements are allowed.
+ Set objects are mutable i.e once we creates set object we can perform any changes in
+that object based on our requirement.
+ We can represent set elements within curly braces and with comma seperation
+ We can apply mathematical operations like union, intersection, difference etc on set
+objects.
+
+Note:
+֍ While creating empty set we have to take special care.
+֍ Compulsory we should use set() function.
+֍ s = {}  It is treated as dictionary but not empty set.
+
+We can create set objects by using set() Function s = set(any sequence)
+
+string as set:
+--------------
+name = "harsha"
+s = set(name) //{'h','s','a','r'}
+
+dynamic set:
+------------
+s = eval(input("enter some set:"))
+
+note:
+=======
++ : is not allowed on sets
+* : is not allowed on sets
+
+== : checks same content irrespective to the order
+
+relational operatores (<,>) : even these are applicable but these are not meaningfull
+
+membership operators : in , not in are applicable
+
+Important Functions of Set:
+
+1) add(x):
+ Adds item x to the set
+
+2) update(x,y,z):
+ To add multiple items to the set.
+ Arguments are not individual elements and these are Iterable objects like List, Range
+etc.
+ All elements present in the given Iterable objects will be added to the set.
+
+ s={10,20,30}
+ l=[40,50,60,10]
+ s.update(l,range(5))
+ print(s)
+Output: {0, 1, 2, 3, 4, 40, 10, 50, 20, 60, 30} 
+
+Q) What is the difference between add() and update()
+ Functions in Set?
+ We can use add() to add individual item to the Set,where as we can use update()
+function to add multiple items to Set.
+ add() function can take only one argument where as update() function can take any
+number of arguments but all arguments should be iterable objects.
+
+
+Q) Which of the following are valid for set s?
+1) s.add(10)
+2) s.add(10,20,30) - TypeError: add() takes exactly one argument (3 given)
+3) s.update(10) - TypeError: 'int' object is not iterable
+4) s.update(range(1,10,2),range(0,10,2))
+
+3) copy():
+ Returns copy of the set.
+ It is cloned object.
+
+4) pop():
+ It removes and returns some random element from the set.
+
+5) remove(x):
+ It removes specified element from the set.
+ If the specified element not present in the Set then we will get KeyError.
+
+6) discard(x):
+1) It removes the specified element from the set.
+2) If the specified element not present in the set then we won't get any error.
+
+Q) What is the difference between remove() and discard() functions in Set?
+Q) Explain differences between pop(),remove() and discard() functionsin Set?
+
+
+7) clear():
+ To remove all elements from the Set.
+
+
+Mathematical Operations on the Set:
+-------------------------------------
+1) union():
+ x.union(y)  We can use this function to return all elements present in both sets
+ x.union(y) OR x|y.
+
+2) intersection():
+ x.intersection(y) OR x&y.
+ Returns common elements present in both x and y.
+
+3) difference():
+ x.difference(y) OR x-y.
+ Returns the elements present in x but not in y.
+
+4)symmetric_difference():
+ x.symmetric_difference(y) OR x^y.
+ Returns elements present in either x OR y but not in both.
+
+Q) Write a Program to Print different Vowels Present in the
+ given Word?
+ 
+ w=input("Enter word to search for vowels: ")
+ s=set(w)
+ v={'a','e','i','o','u'}
+ d=s.intersection(v)
+ print("The different vowel present in",w,"are",d)
+
+ Dict:
+======
+֍ We can use List, Tuple and Set to represent a group of individual objects as a single
+entity.
+֍ If we want to represent a group of objects as key-value pairs then we should go for
+Dictionary.
+Eg:
+ rollno ---- name
+ phone number -- address
+ ipaddress --- domain name
+֍ Duplicate keys are not allowed but values can be duplicated.
+֍ Hetrogeneous objects are allowed for both key and values.
+֍ Insertion order is not preserved
+֍ Dictionaries are mutable
+֍ Dictionaries are dynamic
+֍ indexing and slicing concepts are not applicable
+Note: In C++ and Java Dictionaries are known as "Map" where as in Perl and Ruby it is
+known as "Hash"
+java script : object
+
+How to Create Dictionary?
+-----------------------------
+- d = {} OR d = dict()
+- We are creating empty dictionary. We can add entries as follows
+ d[100]="durga"
+ d[200]="ravi"
+ d[300]="shiva"
+ print(d)  {100: 'durga', 200: 'ravi', 300: 'shiva'}
+- If we know data in advance then we can create dictionary as follows
+- d = {100:'durga' ,200:'ravi', 300:'shiva'}
+- d = {key:value, key:value}
+
+dynamic dict : eval()
+
+How to Access Data from the Dictionary?
+-----------------------------------------
+We can access data by using keys.
+
+If the specified key is not available then we will get KeyError
+print(d[400])  KeyError: 400
+
+We can prevent this by checking whether key is already available or not by using
+has_key() function or by using in operator.
+d.has_key(400)  Returns 1 if key is available otherwise returns 0
+But has_key() function is available only in Python 2 but not in Python 3. Hence
+compulsory we have to use in operator.
+if 400 in d:
+print(d[400])
+
+Q) Write a Program to Enter Name and Percentage Marks
+ in a Dictionary and Display Information on the Screen
+
+How to Update Dictionaries?
+-------------------------------
+֍ d[key] = value
+֍ If the key is not available then a new entry will be added to the dictionary with the
+specified key-value pair
+֍ If the key is already available then old value will be replaced with new value
+
+How to Delete Elements from Dictionary?
+----------------------------------------
+1) del d[key]
+ It deletes entry associated with the specified key.
+ If the key is not available then we will get KeyError.
+
+delete multiple entries:
+------------------------
+del d[key1],d[key2]
+
+
+2) d.clear()
+ To remove all entries from the dictionary.
+
+3) del d
+ To delete total dictionary.Now we cannot access d.
+ 
+ 
+Mathematical operators(+/*):
+-----------------------------
+* and + are not allowed on dict.
+
+== : same content(key and values) should be present
+> , < are not applicable on dict
+
+membership operator(in , not in):
+----------------------------------
+Membership operator is going to check only on keys.
+
+Important Functions of Dictionary:
+-------------------------------------
+1) dict():
+ To create a dictionary
+ d = dict() - It creates empty dictionary
+ d = dict({100:"durga",200:"ravi"}) - It creates dictionary with specified elements
+ 
+ d = dict([(100,"durga"),(200,"shiva"),(300,"ravi")])
+ It creates dictionary with the given list of tuple elements
+
+List of tuples
+Tuples of List
+Set of tuples
+list of list
+tuple of list
+set of list /set of set - not allowed ,bcaus set cannot hold lists(not hashable).
+
+2) len()
+ Returns the number of items in the dictionary.
+3) clear():
+ To remove all elements from the dictionary.
+ 
+4) get():
+ To get the value associated with the key
+d.get(key)
+If the key is available then returns the corresponding value otherwise returns None.It
+wont raise any error.
+
+d.get(key,defaultvalue)
+
+If the key is available then returns the corresponding value otherwise returns default
+value.
+
+ d={100:"durga",200:"ravi",300:"shiva"}
+ print(d[100])  durga
+ print(d[400])  KeyError:400
+ print(d.get(100))  durga
+ print(d.get(400))  None
+ print(d.get(100,"Guest"))  durga
+ print(d.get(400,"Guest"))  Guest
+
+5) pop():
+ 1: d.pop(key)
+- It removes the entry associated with the specified key and returns the
+corresponding value.
+- If the specified key is not available then we will get KeyError.
+ 2: d.pop(key,value)
+ - It removes the entry associated with the specified key and returns the
+corresponding value.
+- If the specified key is not available then it will return value instead of KeyError.
+ 
+ 
+6) popitem():
+ It removes an arbitrary item(key-value) from the dictionaty and returns it.
+ d={100:"durga",200:"ravi",300:"shiva"}
+ print(d)
+ print(d.popitem())
+ print(d)
+Output:
+{100: 'durga', 200: 'ravi', 300: 'shiva'}
+(300, 'shiva')
+{100: 'durga', 200: 'ravi'}
+If the dictionary is empty then we will get KeyError
+d={}
+print(d.popitem()) ==>KeyError: 'popitem(): dictionary is empty'
+
+
+7) keys():
+ It returns all keys associated eith dictionary.
+ d={100:"durga",200:"ravi",300:"shiva"}
+ print(d.keys())
+ for k in d.keys():
+     print(k)
+Output:
+dict_keys([100, 200, 300])
+100
+200
+300
+
+8) values():
+ It returns all values associated with the dictionary.
+ d={100:"durga",200:"ravi",300:"shiva"}
+ print(d.values())
+ for v in d.values():
+     print(v)
+Output:
+dict_values(['durga', 'ravi', 'shiva'])
+durga
+ravi
+shiva
+
+9) items():
+ It returns list of tuples representing key-value pairs.
+ [(k,v),(k,v),(k,v)]
+ d={100:"durga",200:"ravi",300:"shiva"}
+ for k,v in d.items():
+     print(k,"--",v)
+Output
+100 -- durga
+200 -- ravi
+300 -- shiva 
+
+q)
+write a program to get value based on key
+q)
+write a program to get key based on value
+
+
+10) copy():
+ To create exactly duplicate dictionary (cloned copy)
+ d1 = d.copy();
+
+11) setdefault():
+ d.setdefault(k,v)
+ If the key is already available then this function returns the corresponding value.
+ If the key is not available then the specified key-value will be added as new item to
+the dictionary.
+ d={100:"durga",200:"ravi",300:"shiva"}
+ print(d.setdefault(400,"pavan"))
+ print(d)
+ print(d.setdefault(100,"sachin"))
+ print(d)
+ 
+Output:
+pavan
+{100: 'durga', 200: 'ravi', 300: 'shiva', 400: 'pavan'}
+durga
+{100: 'durga', 200: 'ravi', 300: 'shiva', 400: 'pavan'} 
+
+12) update():
+ d.update(x)
+ All items present in the dictionary x will be added to dictionary d
+
+Q) Write a Program to take Dictionary from the Keyboard
+ and print the Sum of Values?
+ 
+ d=eval(input("Enter dictionary:"))
+ s=sum(d.values())
+ print("Sum= ",s)
+
+Output:
+D:\Python_classes>py test.py
+Enter dictionary:{'A':100,'B':200,'C':300}
+Sum= 600
+
+Q) Write a Program to find Number of Occurrences of each Letter
+ present in the given String?
+ word=input("Enter any word: ")
+ d={}
+ for x in word:
+     d[x]=d.get(x,0)+1
+ for k,v in d.items():
+     print(k,"occurred ",v," times")
+	 
+Output:
+D:\Python_classes>py test.py
+Enter any word: mississippi
+m occurred 1 times
+i occurred 4 times
+s occurred 4 times
+p occurred 2 times
+
+
+Q) Write a Program to find Number of Occurrences of each Vowel
+ present in the given String?
+
+Q) Write a Program to accept Student Name and Marks from the
+ Keyboard and creates a Dictionary. Also display Student Marks
+ by taking Student Name as Input?
+ n=int(input("Enter the number of students: "))
+ d={}
+ for i in range(n):
+	 name=input("Enter Student Name: ")
+	 marks=input("Enter Student Marks: ")
+	 d[name]=marks
+ while True:
+	 name=input("Enter Student Name to get Marks: ")
+	 marks=d.get(name,-1)
+	 if marks== -1:
+		print("Student Not Found")
+	 else:
+		print("The Marks of",name,"are",marks)
+	 option=input("Do you want to find another student marks[Yes|No]")
+	 if option=="No":
+		break
+ print("Thanks for using our application") 
+ 
+ 
+ 
+ 
+ Merging of collections:
+ --------------------------
+ Lists:
+ -------
+ l1 = [2,3,7]
+ l2 = [5,77,89]
+ 
+ l3 = l1 + l2 //[2,3,7,5,77,89]
+ l3 = [*l1 + *l2]
+ 
+  tuples:
+ -------
+ t1 = [2,3,7]
+ t2 = [5,77,89]
+ 
+ t3 = t1 + t2 //[2,3,7,5,77,89]
+ t3 = [*t1 + *t2]
+ 
+ sets:(+ is not allowed)
+ -------
+ s1 = {33,44,55}
+ s2 = {45,56,67}
+ s3 = {*s1+*s2}
+ 
+ dict :(+ is not allowed)
+ -------------
+ d1 = {"a":23,"v":45}
+ d2 = {"r":67,"u":89}
+ d3 = {**d1 + **d2}
+ 
+ Nested collections:
+ -------------------
+ store example
+ 
+ note : list inside set and dict(key) is not allowed
+ 
+ Check collection is hashable or not:
+ -------------------------------------
+import collections.abc
+t= (3,4,5)
+l = [44,55,66]
+s = {4,5,6,7,8}
+d= {'a':34,'v':45}
+
+print(isinstance(d,collections.Hashable)) #False
+ 
+ Note:
+ ------
+ All built-in immutable types are hashable, but mutable ones are not. Common hashable types include all numbers, strings (both unicode and bytes ) and tuple . Common unhashable types include list , dict and set . In order to store a key in a dict or set a hash value is needed.
+ 
+ Hashable data types: int , float , str , tuple , and NoneType .
+ Unhashable data types: dict , list , and set .
